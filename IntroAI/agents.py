@@ -3,7 +3,6 @@
 To set up the virtual environment:
     conda create -n agents jupyter
     source activate agents
-    pip install grid
 """
 
 import collections
