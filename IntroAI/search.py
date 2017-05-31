@@ -7,6 +7,7 @@ To set up the virtual environment:
 """
 
 from grid import *
+from utils import *
 
 from collections import defaultdict
 import math
@@ -297,7 +298,8 @@ greedy_best_first_graph_search = best_first_graph_search
 
 
 def astar_search(problem, h=None):
-    """A* heuristic search algorithm.
+    """A* heuristic search algorithm. It uses a heuristic function h which
+    estimates the lowest cost from the current node to a goal node.
     """
     h = memoize(h or problem.h, 'h')
     return best_first_graph_search(problem, lambda n: n.path_cost + h(n))
